@@ -1,0 +1,15 @@
+﻿@model Server.Models.Student
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    @Html.ValidationMessageFor(x => x.Name)
+    <br />
+    <br />
+    @Html.LabelFor(x => x.Marks)
+    @Html.TextBoxFor(x => x.Marks)
+    @Html.ValidationMessageFor(x => x.Marks)
+    <br />
+    <br />
+    <button>ADD</button>
+}

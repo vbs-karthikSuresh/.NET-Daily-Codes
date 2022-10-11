@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<Server.Models.Student>
+<h3>@Html.ActionLink("CreateNew", "Create")</h3>
+<table border="1">
+    <tr>
+        <th>@Html.DisplayNameFor(x => x.ID)</th>
+        <th>@Html.DisplayNameFor(x => x.Name)</th>
+        <th>@Html.DisplayNameFor(x => x.Marks)</th>
+        <th>Edit Action</th>
+        <th>Delete Action</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.ID</td>
+            <td>@i.Name</td>
+            <td>@i.Marks</td>
+            <td><a asp-action="Edit" asp-route-id="@i.ID">Edit</a></td>
+            <td><a asp-action="Delete" asp-route-id="@i.ID">Delete</a></td>
+        </tr>
+    }
+</table>
